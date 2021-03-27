@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+    <head>
+      <title>Rails Parameters</title>
+    </head>
+    <body>
+      <p>Substring: <%= params[:substring] %></p>
+      <% unless @states.empty? %>
+        <% @states.each do |state| %>
+          <p><%= state %></p>
+        <% end %>
+      <% else %>
+        <p>Substring not found in any state names.</p>
+      <% end %>
+    </body>
+  </html>

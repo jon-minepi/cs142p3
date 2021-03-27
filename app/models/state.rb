@@ -10,8 +10,9 @@ class State < ApplicationRecord
               "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
               "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 
-  def self.filter(substring: substr)
-    return states.select{|string| string.include?(substr)}
+
+  def self.filter (substr)
+    return @@states.select{|s| s.downcase.include?(substr.downcase)}.sort
   end
 
 end
